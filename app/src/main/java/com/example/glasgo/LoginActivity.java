@@ -14,8 +14,13 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void startHomepageActivity(View view){
-        Intent homepageIntent = new Intent(this, HomepageActivity.class);
+    public void startHomepageAuthActivity(View view){
+        Intent homepageIntent = new Intent(this, HomeAuthenticatedActivity.class);
+        startActivity(homepageIntent);
+    }
+
+    public void startHomepageGuestActivity(View view){
+        Intent homepageIntent = new Intent(this, HomeGuestActivity.class);
         startActivity(homepageIntent);
     }
 }
