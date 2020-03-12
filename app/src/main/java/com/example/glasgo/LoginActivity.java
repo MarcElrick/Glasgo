@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void startHomepageAuthActivity(View view){
-        Intent homepageIntent = new Intent(this, HomeAuthenticatedActivity.class);
+        Intent homepageIntent = new Intent(this, MapsActivity.class);
         startActivity(homepageIntent);
     }
 
