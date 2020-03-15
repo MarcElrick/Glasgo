@@ -2,7 +2,9 @@ package com.example.glasgo;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -36,5 +38,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         float zoomLevel = 16.0f;
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mainBuilding, zoomLevel));
 
+    }
+
+    public void startExploreActivity(View view){
+        Intent exploreIntent = new Intent(this, ExploreActivity.class);
+        startActivity(exploreIntent);
     }
 }
