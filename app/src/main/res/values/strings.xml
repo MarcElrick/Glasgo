@@ -14,6 +14,8 @@
     <string name="interests_history">History</string>
     <string name="interests_technology">Technology</string>
     <string name="interests_business">Business</string>
+    <string name="building_name">Boyd Orr Building</string>
+    <string name="boyd_orr_1">The Boyd Orr Building is named after the nobel laureate Lord Boyd Orr of Brechin (1880-1971), Rector of the university from 1945 - 1947, and chancellor of the university from 1946 - 1971.</string>
 
     <string-array name="course_type">
         <item>Undergraduate</item>
@@ -28,4 +30,8 @@
     </string-array>
 
     <string name="title_activity_navigation">Map</string>
+    <string name="title_activity_building_info">BuildingInfoActivity</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

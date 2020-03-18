@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="com.example.glasgo">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <!-- Both "AR Optional" and "AR Required" apps require CAMERA permission. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Both "AR Optional" and "AR Required" apps require CAMERA permission. -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- Sceneform requires OpenGL ES 3.0 or later. -->
     <uses-feature
         android:glEsVersion="0x00030000"
@@ -31,7 +25,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".BuildingInfoActivity"></activity>
+        <activity android:name=".buildingInfoActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,7 +41,7 @@
 
         <activity
             android:name=".NavigationActivity"
-            android:label="@string/title_activity_navigation"></activity>
+            android:label="@string/title_activity_navigation" />
         <!--
          Indicates that app requires ARCore ("AR Required"). Causes the Google
         Play Store to download and install Google Play Services for AR along

@@ -53,4 +53,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             startActivity(exploreIntent);
         }
     }
+
+    public void startBuildingActivity(View view) {
+        Intent buildingIntent;
+        buildingIntent = new Intent(this, BuildingInfoActivity.class);
+        startActivity(buildingIntent);
+    }
+
 }
