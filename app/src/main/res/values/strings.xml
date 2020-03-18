@@ -8,13 +8,24 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="choose_school">Please Choose Your School</string>
+    <string name="choose_studies">Please Choose Your Type of Studies</string>
+    <string name="choose_interests">Please Choose Your Top Interests</string>
+    <string name="interests_sports">Sports</string>
+    <string name="interests_history">History</string>
+    <string name="interests_technology">Technology</string>
+    <string name="interests_business">Business</string>
+
+    <string-array name="course_type">
+        <item>Undergraduate</item>
+        <item>Postgraduate</item>
+    </string-array>
 
     <string-array name="Schools">
         <item>Computing Science</item>
         <item>Maths and Stats</item>
         <item>Adam Smith Business School</item>
         <item>Engineering</item>
-
     </string-array>
+
     <string name="title_activity_navigation">Map</string>
 </resources>

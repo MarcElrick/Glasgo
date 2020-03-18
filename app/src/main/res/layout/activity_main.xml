@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:onClick="startMapActivityNoAuth"
+        android:onClick="startExploreActivity"
         android:padding="20px"
         android:text="Login as Guest"
         android:textColor="@android:color/white"
