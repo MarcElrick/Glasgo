@@ -46,7 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void startExploreActivity(View view) {
         Intent exploreIntent;
         if (isAuth) {
-            exploreIntent = new Intent(this, NavigationActivity.class);
+            exploreIntent = new Intent(this,CameraActivity.class);
             startActivity(exploreIntent);
         } else {
             exploreIntent = new Intent(this, ExploreActivity.class);

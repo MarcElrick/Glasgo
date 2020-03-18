@@ -29,7 +29,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/radioButton10"
             app:layout_constraintHorizontal_bias="0.468"
-            app:layout_constraintStart_toStartOf="@+id/radioButton11" />
+            app:layout_constraintStart_toStartOf="@+id/radioButton11"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton10" />
 
         <RadioButton
             android:id="@+id/radioButton11"
@@ -37,28 +38,30 @@
             android:layout_height="38dp"
             android:layout_marginTop="8dp"
             android:text="@string/interests_technology"
+            app:layout_constraintEnd_toEndOf="@+id/radioButton7"
             app:layout_constraintStart_toStartOf="@+id/radioButton7"
             app:layout_constraintTop_toBottomOf="@+id/radioButton7" />
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="298dp"
-            android:layout_height="61dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/choose_studies"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
             app:layout_constraintStart_toStartOf="@+id/spinner"
             app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="292dp"
-            android:layout_height="62dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/choose_interests"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/spinner2"
@@ -76,7 +79,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,7 +97,7 @@
 
         <Spinner
             android:id="@+id/spinner2"
-            android:layout_width="292dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/course_type"
             android:padding="20dp"
@@ -112,6 +114,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:text="@string/choose_school"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -123,7 +126,7 @@
             android:id="@+id/radioButton7"
             android:layout_width="138dp"
             android:layout_height="38dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/interests_business"
             app:layout_constraintStart_toStartOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -132,23 +135,18 @@
             android:id="@+id/radioButton8"
             android:layout_width="138dp"
             android:layout_height="38dp"
-            android:layout_marginTop="8dp"
             android:text="@string/interests_history"
-            app:layout_constraintEnd_toEndOf="@+id/textView9"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/radioButton7"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/radioButton7"
+            app:layout_constraintEnd_toEndOf="@+id/textView9" />
 
         <RadioButton
             android:id="@+id/radioButton10"
             android:layout_width="138dp"
             android:layout_height="38dp"
-            android:layout_marginTop="8dp"
             android:text="@string/interests_sports"
-            app:layout_constraintEnd_toEndOf="@+id/textView9"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/radioButton11"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton8" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/radioButton11"
+            app:layout_constraintEnd_toEndOf="@+id/radioButton8"
+            app:layout_constraintStart_toStartOf="@+id/radioButton8" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
