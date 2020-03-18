@@ -2,7 +2,9 @@ package com.example.glasgo;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,12 +31,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker in Glasgow and move the camera
         LatLng mainBuilding = new LatLng(55.872332, -4.288034);
         mMap.addMarker(new MarkerOptions().position(mainBuilding).title("You starting here!"));
 
         float zoomLevel = 16.0f;
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mainBuilding, zoomLevel));
 
+    }
+
+    public void startExploreActivity(View view){
+        Intent exploreIntent = new Intent(this, ExploreActivity.class);
+        startActivity(exploreIntent);
     }
 }
