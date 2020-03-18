@@ -14,13 +14,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void startHomepageAuthActivity(View view){
-        Intent homepageIntent = new Intent(this, MapsActivity.class);
-        startActivity(homepageIntent);
+    public void startMapActivityAuth(View view){
+        Intent mapPageIntent = new Intent(this, MapsActivity.class);
+        mapPageIntent.putExtra("authenticated", true);
+        startActivity(mapPageIntent);
     }
 
-    public void startHomepageGuestActivity(View view){
-        Intent homepageIntent = new Intent(this, HomeGuestActivity.class);
-        startActivity(homepageIntent);
+    public void startMapActivityNoAuth(View view){
+        Intent mapPageIntent = new Intent(this, MapsActivity.class);
+        mapPageIntent.putExtra("authenticated", false);
+        startActivity(mapPageIntent);
     }
 }

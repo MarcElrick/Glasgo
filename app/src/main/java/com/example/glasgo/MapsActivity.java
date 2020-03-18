@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private boolean isAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        Bundle bundle = getIntent().getExtras();
+        isAuth = bundle.getBoolean("authenticated");
     }
 
     @Override
@@ -40,8 +43,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    public void startExploreActivity(View view){
-        Intent exploreIntent = new Intent(this, ExploreActivity.class);
-        startActivity(exploreIntent);
+    public void startExploreActivity(View view) {
+        Intent exploreIntent;
+        if (isAuth) {
+            exploreIntent = new Intent(this, NavigationActivity.class);
+            startActivity(exploreIntent);
+        } else {
+            exploreIntent = new Intent(this, ExploreActivity.class);
+            startActivity(exploreIntent);
+        }
     }
 }
