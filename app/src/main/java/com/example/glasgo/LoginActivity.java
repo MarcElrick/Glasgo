@@ -20,9 +20,9 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(mapPageIntent);
     }
 
-    public void startMapActivityNoAuth(View view){
-        Intent mapPageIntent = new Intent(this, MapsActivity.class);
-        mapPageIntent.putExtra("authenticated", false);
-        startActivity(mapPageIntent);
-    }
+    public void startExploreActivity(View view) {
+        Intent exploreIntent;
+            exploreIntent = new Intent(this, ExploreActivity.class);
+            startActivity(exploreIntent);
+        }
 }

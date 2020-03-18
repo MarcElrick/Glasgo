@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +12,59 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
+        android:isScrollContainer="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
         tools:context=".LoginActivity">
+
+        <Button
+            android:id="@+id/exploreButton4"
+            android:layout_width="117dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="startMapActivityAuth"
+            android:text="Start Exploring"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/radioButton10"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="@+id/radioButton11" />
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="138dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/interests_technology"
+            app:layout_constraintStart_toStartOf="@+id/radioButton7"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton7" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="298dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/choose_studies"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="292dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/choose_interests"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/spinner2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/spinner2"
+            app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
         <TextView
             android:id="@+id/textView"
@@ -40,20 +93,69 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:layout_constraintVertical_bias="0.0" />
 
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="292dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/course_type"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
             android:text="@string/choose_school"
+            android:textColor="@color/colorPrimary"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.547"
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="138dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/interests_business"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="138dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/interests_history"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/radioButton7"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="138dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/interests_sports"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/radioButton11"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="46dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

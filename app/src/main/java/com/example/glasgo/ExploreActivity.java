@@ -1,5 +1,6 @@
 package com.example.glasgo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +22,12 @@ public class ExploreActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Schools));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
+    }
+
+    public void startMapActivityAuth(View view){
+        Intent mapPageIntent = new Intent(this, MapsActivity.class);
+        mapPageIntent.putExtra("authenticated", true);
+        startActivity(mapPageIntent);
     }
 
 
