@@ -54,7 +54,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimary"
         android:onClick="startBuildingActivity"
-        android:text="Expore the Boyd Orr Building"
+        android:text="Explore the Boyd Orr Building"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
